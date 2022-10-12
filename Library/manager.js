@@ -1,21 +1,16 @@
-// Variable using Employee.js
+// linking to employee.js
 const Employee = require("./Employee");
 
-// Manager class
+// Manager class 
 class Manager extends Employee {
-    constructor (name, id, email, officeNumber) {
-        super (name, id, email);
-        this.officeNumber = officeNumber;
+    constructor(name, id, email, office) {
+        super(name, id, email);
+        this.office = office;
     }
-
-    getOfficeNumber() {
-        return this.officeNumber;
-    }
-
-    getRole() {
-        return "Manager";
+    getOffice() {
+        return this.office;
     }
 }
 
-// Export
-module.exports = Manager;
+// exports Manager module
+module.exports = Manager
